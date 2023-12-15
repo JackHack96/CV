@@ -1,0 +1,241 @@
+%% start of file `cv.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com), 2020-2022 moderncv maintainers (github.com/moderncv).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+\setlength{\footskip}{149.60005pt}                 % depending on the amount of information in the footer, you need to change this value. comment this line out and set it to the size given in the warning
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% font loading
+% for luatex and xetex, do not use inputenc and fontenc
+% see https://tex.stackexchange.com/a/496643
+\ifxetexorluatex
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \setmathfont{Latin Modern Math}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+% document language
+\usepackage[english]{babel}  % FIXME: using spanish breaks moderncv
+
+% personal data
+\name{Matteo}{Iervasi}
+%\title{Curriculum Vitae}
+%\born{27 January 1996}
+%\address{Via Olmo 20A}{37068}{VR}
+\email{matteoiervasi@gmail.com}
+\homepage{https://jackhack96.github.io/}
+\phone[mobile]{+39~377~275~9725}
+
+% Social icons
+\social[linkedin]{matteo-iervasi}
+
+%\social[github]{JackHack96}
+%\social[gitlab]{JackHack96}
+%\social[stackoverflow]{3760726/matteo-iervasi}
+
+\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+
+% bibliography adjustments (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+%\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+Firmware engineer with a strong background in low-level programming and microcontroller development, seeking opportunities to apply my technical expertise in firmware engineering to contribute to innovative and impactful projects. 
+Experienced in creating efficient and reliable firmware solutions for embedded systems. Expert in C, C++ and Python, with a focus on optimizing performance and ensuring hardware compatibility. 
+Skilled in utilizing the Yocto Project to customize embedded Linux distributions.
+
+\section{Education}
+% arguments 3 to 6 can be left empty
+\cventry{2018--2020}{Master's degree in Computer Science and Engineering}{University of Verona}{Verona}{}{
+	Relevant courses:
+	\begin{itemize}
+		\item Embedded systems design
+		\item Networked embedded systems
+		\item Physics of integrated devices
+		\item System theory
+	\end{itemize}
+}
+\cventry{2015--2018}{Bachelor's degree in Computer Science}{University of Verona}{Verona}{}{
+	Relevant courses:
+	\begin{itemize}
+		\item Operating systems
+		\item Software engineering
+		\item Signal and image processing
+		\item Language and compilers
+	\end{itemize}
+}
+\cventry{2010--2015}{High school diploma}{Liceo Scientifico Angelo Messedaglia}{Verona}{}{
+	Attended the ``\textit{Applied Science}'' curriculum, which focuses on Computer Science, Physics, Chemistry and Biology.
+	\begin{itemize}
+		\item Developed a software for controlling the chemistry lab spectrophotometer
+	\end{itemize}
+}
+
+%\section{Master thesis}
+%\cvitem{Title}{\emph{Integrating synthetic and real components of a cyber-physical production system}}
+%\cvitem{Supervisor}{Prof. Franco Fummi}
+%\cvitem{Advisor}{Dr. Stefano Centomo}
+%\cvitem{Abstract}{
+%	One of the key aspects of \emph{Industry 4.0} is the concept of \texttt{Digital Twins}, as they are an enabling
+%	technology for things like predictive maintenance, real-time production optimization, on-demand product
+%	customization and so on\ldots
+%	A limiting factor in the creation of \emph{Digital Twins} is the abundance of incompatible modeling languages. Among
+%	the research and the projects that tries to overcome this issue, \texttt{AutomationML} is increasingly cited and used
+%	as a vendor-neutral language for model exchange.
+%	This work proposes a simple direct approach for the integration of models in CPPS systems, using \texttt{AutomationML}
+%	as the base technology.
+%}
+
+\section{Employment}
+\cventry{Sep 2020-- Present}{Embedded software engineer}{EDALab S.r.l.}{San Giovanni Lupatoto}{}{General firmware and low-level embedded software development for third-parties.
+\begin{itemize}
+	\item Collaborated with clients to design and develop firmware solutions for various embedded systems.
+	\item Implemented low-level software, optimizing performance and ensuring hardware compatibility.
+	\item Contributed to the development of real-time systems for industrial applications.
+\end{itemize}
+}
+
+\cventry{Aug 2020}{Internship}{EDALab S.r.l.}{San Giovanni Lupatoto}{}{Integrated reliable update mechanism base on SWUpdate for BoxIO.}
+\cventry{Dec 2019}{Internship}{University of Verona}{Verona}{}{Developed an operating system image for classrooms' displays based on Raspberry Pi.}
+\cventry{Gen 2017-- Mar 2018}{Internship}{Sordato S.r.l.}{Monteforte d'Alpone}{}{Developed software for controlling an array of automated wine fermentation machines.}
+\cventry{2017--2018}{Teacher assistant}{University of Verona}{Verona}{}{I worked as a teacher assistant in the following courses:
+\begin{itemize}
+	\item Operative systems
+	\item Programming I
+	\item Programming II
+\end{itemize}
+}
+
+\subsection{Volunteering}
+\cventry{2017-- Present}{Technician}{AVIS}{Vigasio}{}{I volunteered as a technician and general assistance at the local AVIS association,
+	an Italian organization that promotes blood donation.}
+
+\section{Languages}
+\cvitemwithcomment{Italian}{Native language}{}
+\cvitemwithcomment{English}{Professional level}{}
+
+\section{Skills}
+\cvitem{Programming Languages}{Excellent knowledge of C, C++ and Python.}
+\cvitem{Firmware Development}{Expertise in low-level programming for various microcontrollers with various environments and compilers, e.g. IAR®, GCC/Clang and Keil®.}
+\cvitem{MCUs}{Expertise in developing for ST® STM32, Renesas® RL78, Renesas® RX130, Renesas® RA, NXP® Kinetis, Cypress® FM4 and other ARM MCUs, Microchip® PIC18, PIC24 and PIC32, Intel® 8051 and Espressif® ESP32/ESP8266.}
+\cvitem{Embedded Systems}{Experienced using the Yocto Project for customizing embedded Linux distributions, Qt/QML for developing complex HMIs.}
+\cvitem{Operating Systems}{Proficient in developing on GNU/Linux and Microsoft® Windows®.}
+%\cvitem{Office Automation}{Skilled in using the Microsoft® Office® suite and LibreOffice.}
+%\cvitem{Web technologies}{HTML, CSS, Familiar with WordPress, Joomla}
+\cvitem{Scripting}{Expert in OS automation using Bash and general automation using Python.}
+
+
+%\section{Computer Science skills}
+% \cvitem{Skill matrix}{Alternatively, provide a skill matrix to show off your skills}
+%% Skill matrix as an alternative to rate one's skills, computer or other.
+
+%% Adjusts width of skill matrix columns.
+%% Usage \setcvskillcolumns[<width>][<factor>][<exp_width>]
+%% <width>, <exp_width> should be lengths smaller than \textwidth, <factor> needs to be between 0 and 1.
+%% Examples:
+% \setcvskillcolumns[5em][][]%    adjust first column. Same as \setcvskillcolumns[5em]
+% \setcvskillcolumns[][0.45][]%   adjust third (skill) column. Same as \setcvskillcolumns[][0.45]
+% \setcvskillcolumns[][][\widthof{``Year''}]%     adjust fourth (years) column.
+% \setcvskillcolumns[][0.45][\widthof{``Year''}]%
+% \setcvskillcolumns[\widthof{``Languag''}][0.48][]
+% \setcvskillcolumns[\widthof{``Languag''}]%
+
+%% Adjusts width of legend columns. Usage \setcvskilllegendcolumns[<width>][<factor>]
+%% <factor> needs to be between 0 and 1. <width> should be a length smaller than \textwidth
+%% Examples:
+% \setcvskilllegendcolumns[][0.45]
+% \setcvskilllegendcolumns[\widthof{``Legend''}][0.45]
+% \setcvskilllegendcolumns[0ex][0.46]% this is usefull for the banking style
+
+%% Add a legend if you are using \cvskill{<1-5>} command or \cvskillentry
+%% Usage \cvskilllegend[*][<post_padding>][<first_level>][<second_level>][<third_level>][<fourth_level>][<fifth_level>]{<name>}
+% \cvskilllegend % insert default legend without lines
+%\cvskilllegend*[1em]{}% adjust post spacing
+% \cvskilllegend*{Legend}%  Alternatively add a description string
+%% adjust the legend entries for other languages, here German
+% \cvskilllegend[0.2em][Grundkenntnisse][Grundkenntnisse und eigene Erfahrung in Projekten][Umfangreiche Erfahrung in Projekten][Vertiefte Expertenkenntnisse][Experte\,/\,Spezialist]{Legende}
+
+%% Alternative legend style with the first three skill levels in one column
+%% Usage \cvskillplainlegend[*][<post_padding>][<first_level>][<second_level>][<third_level>][<fourth_level>][<fifth_level>]{<name>}
+% \setcvskilllegendcolumns[][0.6]%  works for classic, casual, banking
+% \setcvskilllegendcolumns[][0.55]%  works better for oldstyle and fancy
+% \cvskillplainlegend{}
+% \cvskillplainlegend[0.2em][Grundkenntnisse][Grundkenntnisse und eigene Erfahrung in Projekten][Umfangreiche Erfahrung in Projekten][Vertiefte Expertenkenntnisse][Experte/Guru]{Legende}
+
+%% Add a head of the skill matrix table with descriptions.
+%% Usage \cvskillhead[<post_padding>][<Level>][<Skill>][<Years>][<Comment>]%
+%\cvskillhead[-0.1em]%   this inserts the standard legend in english and adjust padding
+%% Adjust head of the skill matrix for other languages
+% \cvskillhead[0.25em][Level][F\"ahigkeit][Jahre][Bemerkung]
+
+%% \cvskillentry[*][<post_padding>]{<skill_cathegory>}{<0-5>}{<skill_name>}{<years_of_experience>}{<comment>}%
+%% Example usages:
+%\cvskillentry*{Language:}{5}{C}{\number\numexpr\year-2010\relax~}{As a firmware engineer, C is often my only language available. I also know compiler-specific extension for GCC and IAR®.}
+%\cvskillentry{}{4}{C++}{\number\numexpr\year-2018\relax~}{Though not as good as I'm with C, I use C++ often, generally for HMI in embedded projects with frameworks such as Qt.}
+%\cvskillentry{}{3}{Python}{\number\numexpr\year-2018\relax~}{I developed some personal projects with Python and it's my go-to choice when doing complex scripts.}
+%\cvskillentry{}{2}{Java}{\number\numexpr\year-2014\relax~}{I've used Java in many personal projects and also at the university, but I don't generally like to use it.}
+%\cvskillentry{}{3}{\LaTeX}{\number\numexpr\year-2018\relax~}{I've used \LaTeX for all my documents at the University and I still use it sometimes for complex documents, as I generally prefer it over Microsoft® Office®.}
+%\cvskillentry*{OS:}{4}{GNU/Linux}{\number\numexpr\year-2010\relax~}{I've used many GNU/Linux distributions in the past and I've settled on Ubuntu for a decade now.}% notice the use of the starred command and the optional
+%\cvskillentry{}{4}{Microsoft® Windows®}{\number\numexpr\year-2005\relax~}{I can use any Microsoft® Windows® version though I prefer to use Linux when possible.}
+%\cvskillentry*{MCU:}{4}{ST® STM32}{\number\numexpr\year-2018\relax~}{ST has been my main developing platform for quite some time.}
+%\cvskillentry{}{4}{Renesas® RL78}{\number\numexpr\year-2020\relax~}{I've worked with this 16-bit architecture for a variety of customers.}
+%\cvskillentry{}{3}{Renesas® RX130}{\number\numexpr\year-2020\relax~}{My knowledge on this platform is more limited than RL78 because of fewer projects, but still good.}
+%\cvskillentry{}{2}{Intel® 8051}{\number\numexpr\year-2020\relax~}{I've used this architecture on some projects with success.}
+%\cvskillentry{}{3}{Other ARM-based}{\number\numexpr\year-2020\relax~}{I've worked with many different ARM-based architectures apart from ST, like Renesas® RA, NXP® Kinetis, Cypress® FM4 and others.}
+%\cvskillentry{}{5}{Arduino}{\number\numexpr\year-2018\relax~}{Arduino was by starting point in the embedded world. It's still good for rapid prototyping.}
+%\cvskillentry*{Others:}{4}{Yocto}{\number\numexpr\year-2020\relax~}{Experienced using Yocto Project for customizing embedded Linux distributions.}
+%\cvskillentry{}{4}{Git}{\number\numexpr\year-2014\relax~}{I use Git since .}
+%\cvskillentry*[1em]{Methods}{4}{SCRUM}{8}{SCRUM master for 5 years}
+%% \cvskill{<0-5>} command
+% \cvitem{\textbackslash{cvskill}:}{Skills can be visually expressed by the \textbackslash{cvskill} command, e.g. \cvskill{2}}
+
+\section{Interests}
+\cvitem{Electronics}{I like studying electronics and then putting it into practice, from circuit design to PCB printing.}
+\cvitem{3D printing}{I'm into 3D printing and I enjoy designing things in CAD that then I use in my projects.}
+\cvitem{DIY}{I love to repair home appliances, furnitures and fixing broken computers.}
+
+
+
+\clearpage
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.
